@@ -9,6 +9,6 @@ import java.util.List;
 @Repository
 public interface TripBookingRepository extends JpaRepository<TripBooking, Integer>{
 
-    @Query(nativeQuery = true,value = "select * from TripBooking where drivar_driverId =:driverId")
+    @Query(nativeQuery = true,value = "select * from TripBooking where driver_driverId =:driverId")
     public List<TripBooking> findTrips(Integer driverId);
 }

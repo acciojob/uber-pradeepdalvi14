@@ -152,7 +152,7 @@ public class CustomerServiceImpl implements CustomerService {
 		newTripBooked.setToLocation(toLocation);
 		newTripBooked.setDistanceInKm(distanceInKm);
 		newTripBooked.setStatus(TripStatus.CONFIRMED);
-		newTripBooked.setDriver((java.sql.Driver) driver1);
+		newTripBooked.setDriver(driver1);
 		int rate = driver1.getCab().getPerKmRate();
 		newTripBooked.setBill(distanceInKm*rate);
 

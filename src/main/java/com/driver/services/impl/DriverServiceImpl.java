@@ -43,7 +43,7 @@ public class DriverServiceImpl implements DriverService {
 
 	@Override
 	public void removeDriver(int driverId){
-		// Delete driver without using deleteById function
+//		 Delete driver without using deleteById function
 		List<TripBooking> bookingList = tripBookingRepository.findTrips(driverId);
 		for(TripBooking trip:bookingList){
 			trip.setStatus(TripStatus.CANCELED);
@@ -57,7 +57,7 @@ public class DriverServiceImpl implements DriverService {
 	public void updateStatus(int driverId){
 		//Set the status of respective car to unavailable
 		Driver d = driverRepository3.findById(driverId).get();
-
+//
 		Cab cab = d.getCab();
 		cab.setAvailable(false);
 	}
